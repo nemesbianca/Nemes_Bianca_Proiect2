@@ -1,0 +1,64 @@
+﻿@page
+@model Nemes_Bianca_Proiect2.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Artwork</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Artwork.Title" class="control-label"></label>
+                <input asp-for="Artwork.Title" class="form-control" />
+                <span asp-validation-for="Artwork.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Artwork.Gallery" class="control-label"></label>
+                <input asp-for="Artwork.Gallery" class="form-control" />
+                <span asp-validation-for="Artwork.Gallery" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Artwork.Price" class="control-label"></label>
+                <input asp-for="Artwork.Price" class="form-control" />
+                <span asp-validation-for="Artwork.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Artwork.OccurrenceDate" class="control-label"></label>
+                <input asp-for="Artwork.OccurrenceDate" class="form-control" />
+                <span asp-validation-for="Artwork.OccurrenceDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Artwork.Artist" class="control-label"></label>
+                <input asp-for="Artwork.Artist" class="form-control" />
+                <span asp-validation-for="Artwork.Artist" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Artwork.Category" class="control-label"></label>
+                <input asp-for="Artwork.Category" class="form-control" />
+                <span asp-validation-for="Artwork.Category" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Artwork.Movement" class="control-label"></label>
+                <input asp-for="Artwork.Movement" class="form-control" />
+                <span asp-validation-for="Artwork.Movement" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
